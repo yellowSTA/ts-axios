@@ -17,12 +17,25 @@ axios({
         token: '123asdafdsfg4d45'
     }
 })
-
 axios({
     method: 'post',
     url: '/base/post',
-    data: {
-        imgsId:['a','1','b','well','嗨起来'],
-        token: '123asdafdsfg4d45'
-    }
+    headers: {
+        token: '123asdafdsfg4d45',
+        'Content-Type': 'text/plain;charset=utf-8'
+    },
+    data: 123
 })
+console.log(
+    axios({
+        method: 'post',
+        url: '/base/post',
+        responseType: 'json',
+        data: {
+            imgsId:['a','1','b','well','嗨起来'],
+            token: '123asdafdsfg4d45'
+        }
+    })
+    
+)
+

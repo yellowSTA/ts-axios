@@ -44,4 +44,11 @@ router.post('/base/post', function(req, res) {
     res.json(req.body)
 })
 
+router.post('/error/post', function(req, res) {
+    setTimeout(() => {
+        res.json(req.body)
+    }, 5000);
+    
+})
+
 app.use(router);
