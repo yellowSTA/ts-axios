@@ -51,4 +51,28 @@ router.post('/error/post', function(req, res) {
     
 })
 
+router.post('/extend/post', function(req, res) {
+    res.json({
+        msg: 'hello world'
+    })
+})
+
+router.get('/extend/get', function(req, res) {
+    res.json({
+        msg: 'hello world'
+    })
+})
+
+router.patch('/extend/patch', function(req, res) {
+    res.json({
+        msg: 'hello world'
+    })
+})
+
+router.put('/extend/put', function(req, res) {
+    res.json({
+        msg: 'hello world'
+    })
+})
+
 app.use(router);
