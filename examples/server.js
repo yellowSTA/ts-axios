@@ -75,4 +75,15 @@ router.put('/extend/put', function(req, res) {
     })
 })
 
+router.get('/extend/users', function(req, res) {
+    res.json({
+        code: 10000,
+        data: {username: 'yellowstar', sex: 1},
+        msg: 'hello world'
+    })
+})
+
+router.get('/interceptor/test', function(req, res) {
+    res.end('hello')
+})
 app.use(router);
