@@ -12,6 +12,7 @@ axios.interceptors.response.use(res => {
     res.data += 2
     return res.data
 })
+console.log(axios.interceptors)
 
 axios({
     url: '/interceptor/test',
